@@ -1,0 +1,3 @@
+[submodule "cruddy"]
+	path = cruddy
+	url = git@github.com:lazychaser/cruddy.git
