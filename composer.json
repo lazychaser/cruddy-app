@@ -6,14 +6,14 @@
 
 	"require": {
 		"laravel/framework": "~4.1.18",
-		"cartalyst/sentry": "~2.0.2",
-		"anahkiasen/former": "~3.4.1"
+		"cartalyst/sentry": "~2.0",
+		"anahkiasen/former": "~3.4"
 	},
 
     "require-dev": {
-		"way/generators": "~1.1.0",
-		"barryvdh/laravel-ide-helper": "~1.8.0",
-		"fzaninotto/faker": "~1.3.0"
+		"way/generators": "~1.1",
+		"barryvdh/laravel-ide-helper": "~1.8",
+		"fzaninotto/faker": "~1.3"
 	},
 
 	"autoload": {
