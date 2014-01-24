@@ -6,7 +6,7 @@
 
     'layout' => 'cruddy::layout',
 
-    'assets' => 'public',
+    'assets' => 'cruddy/public',
 
     'menu' => array(
         'Store' => array(

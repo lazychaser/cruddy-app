@@ -109,6 +109,7 @@ return array(
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'App\Service\FormServiceProvider',
 		'Kalnoy\Cruddy\CruddyServiceProvider',
+		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
 	),
 
