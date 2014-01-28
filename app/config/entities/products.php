@@ -24,7 +24,7 @@
             'prompt' => 'Please select type',
         ],
 
-        'description' => 'text',
+        'description' => 'markdown',
         'image' => ['type' => 'image', 'required' => true],
         'categories' => 'relation',
     ],

@@ -6,5 +6,6 @@
 </head>
 <body>
     <div class="container" style="margin-top: 20px">@yield('content', isset($content) ? $content : '')</div>
+    @yield('scripts')
 </body>
 </html>

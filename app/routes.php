@@ -15,3 +15,8 @@ Route::get('select/{entity}', ['before' => 'backend.auth', function ($entity) {
 
     return View::make('search', compact('entity'));
 }]);
+
+Route::get('sandbox/ace', function ()
+{
+    return View::make('sandbox.ace');
+});

@@ -7,7 +7,9 @@
 	"require": {
 		"laravel/framework": "~4.1.18",
 		"cartalyst/sentry": "~2.0",
-		"anahkiasen/former": "~3.4"
+		"anahkiasen/former": "~3.4",
+		"intervention/image": "~1.5",
+		"intervention/imagecache": "~0.5"
 	},
 
     "require-dev": {

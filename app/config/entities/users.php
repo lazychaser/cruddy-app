@@ -50,6 +50,8 @@
             'required' => true,
         ),
 
+        'phone' => ['mask' => '+7 (999) 999-9999? 9999'],
+
         'activated' => 'bool',
 
         'password' => 'password',
