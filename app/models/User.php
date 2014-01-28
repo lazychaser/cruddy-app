@@ -11,7 +11,7 @@ class User extends SentryUser {
 	protected static $throttleModel = 'Cartalyst\Sentry\Throttling\Eloquent\Throttle';
 
 	protected $fillable = array(
-		'first_name', 'last_name',
+		'first_name', 'last_name', 'slug',
 		'email', 'password', 'permissions_string', 'activated', 'permissions',
 		'phone',
 	);

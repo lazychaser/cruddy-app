@@ -45,6 +45,8 @@
     'fields' => array(
         'last_name', 'first_name',
 
+        'slug' => ['type' => 'slug', 'ref' => ['last_name', 'first_name']],
+
         'email' => array(
             'type' => 'email',
             'required' => true,
