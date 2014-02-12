@@ -20,5 +20,3 @@ Route::get('sandbox/ace', function ()
 {
     return View::make('sandbox.ace');
 });
-
-Route::get('dashboard', 'BackendController@dashboard');
