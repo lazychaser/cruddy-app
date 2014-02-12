@@ -9,7 +9,14 @@ More info @ [Laravel Forums](http://forums.laravel.io/viewtopic.php?id=15689)
 
 This shipping includes an app that I use for rapid development. You can set it up and see what Cruddy is capable of.
 
-At first you need to clone this repo. Then, configure database credentials as you would do in usual Laravel app. Migrate and seed database:
+At first you need to clone this repo. It has a submodule that you need to update, so 
+run following commands:
+
+```
+git submodule init && git submodule update && composer update
+```
+
+Then, configure database credentials as you would do in usual Laravel app. Migrate and seed database:
 
 ```
 php artisan migrate --package cartalyst/sentry && php artisan migrate --seed

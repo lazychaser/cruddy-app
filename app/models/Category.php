@@ -9,7 +9,7 @@ class Category extends Eloquent {
         return empty($value) ? [] : json_decode($value);
     }
 
-    public function setImagesAttribute($value)
+    public function setImagesAttribute(array $value)
     {
         $images = $this->images;
 

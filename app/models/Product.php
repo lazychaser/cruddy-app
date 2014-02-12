@@ -10,4 +10,9 @@ class Product extends Eloquent {
     {
         return $this->belongsToMany('Category', 'product_categories');
     }
+
+    public function parameters()
+    {
+        return $this->hasMany('ProductParameter', 'product_id', 'id');
+    }
 }

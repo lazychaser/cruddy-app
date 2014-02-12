@@ -4,6 +4,5 @@
 /assets/vendor
 /node_modules
 composer.phar
-composer.lock
 .DS_Store
 _ide_helper.php

@@ -110,6 +110,7 @@ return array(
 		'App\Service\FormServiceProvider',
 		'Kalnoy\Cruddy\CruddyServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+		'Clockwork\Support\Laravel\ClockworkServiceProvider',
 
 	),
 
