@@ -5,6 +5,12 @@ Backend CRUD without a line of code
 
 More info @ [Laravel Forums](http://forums.laravel.io/viewtopic.php?id=15689)
 
+### Requirements
+**PHP** >= 5.4
+
+**MySQL**
+
+
 ### Installation
 
 This shipping includes an app that I use for rapid development. You can set it up and see what Cruddy is capable of.
