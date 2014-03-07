@@ -13,7 +13,7 @@ At first you need to clone this repo. It has a submodule that you need to update
 run following commands:
 
 ```
-git submodule init && git submodule update && composer update
+git submodule init && git submodule update && composer install
 ```
 
 Then, configure database credentials as you would do in usual Laravel app. Migrate and seed database:
