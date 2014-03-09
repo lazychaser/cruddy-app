@@ -8,6 +8,8 @@
 
     'permissions' => 'sentry',
 
+    'auth_filter' => 'auth',
+
     'layout' => 'cruddy::layout',
 
     'assets' => 'cruddy/public',

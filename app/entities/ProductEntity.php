@@ -18,8 +18,13 @@ class ProductEntity extends BaseSchema {
         $schema->enum('type', $this->getTypes())->prompt('Please, select type');
         $schema->markdown('description');
         $schema->image('image');
-        $schema->relates('categories', 'categories');
-        $schema->inline('parameters', 'product_parameters');
+        
+        $schema->relates('categories', 'categories')->filterOptions(function ($q)
+        {
+            $q->whereNotNull('parent_id');
+        });
+
+        $schema->embed('parameters', 'product_parameters');
         $schema->timestamps();
     }
 
@@ -46,7 +51,7 @@ class ProductEntity extends BaseSchema {
     {
         $validate->rules(
         [
-            
+            'title' => 'required',
         ]);
     }
 }

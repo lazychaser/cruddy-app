@@ -22,7 +22,7 @@ class ProductParameterEntity extends BaseSchema {
     public function fields($s)
     {
         $s->increments('id');
-        $s->relates('parameter', 'parameters')->required();
+        $s->relates('parameter', 'parameters')->required()->label('Test label');
         $s->string('value')->required();
         $s->string('order');
     }

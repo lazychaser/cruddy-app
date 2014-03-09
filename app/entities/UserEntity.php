@@ -16,10 +16,10 @@ class UserEntity extends BaseSchema {
         $schema->bool('activated');
         $schema->string('first_name');
         $schema->string('last_name');
-        $schema->inline('address');
+        $schema->embed('address')->required();
         $schema->email('email')->required();
         $schema->password('password')->required();
-        $schema->inline('throttle');
+        $schema->embed('throttle');
         $schema->relates('groups');
         $schema->code('permissions_string');
         $schema->datetime('last_login')->unique();
