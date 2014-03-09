@@ -5,6 +5,12 @@ Backend CRUD without a line of code
 
 More info @ [Laravel Forums](http://forums.laravel.io/viewtopic.php?id=15689)
 
+### Requirements
+**PHP** >= 5.4
+
+**MySQL**
+
+
 ### Installation
 
 This shipping includes an app that I use for rapid development. You can set it up and see what Cruddy is capable of.
@@ -13,7 +19,7 @@ At first you need to clone this repo. It has a submodule that you need to update
 run following commands:
 
 ```
-git submodule init && git submodule update && composer update
+git submodule init && git submodule update && composer install
 ```
 
 Then, configure database credentials as you would do in usual Laravel app. Migrate and seed database:
