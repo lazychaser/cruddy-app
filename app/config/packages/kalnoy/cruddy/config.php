@@ -23,6 +23,8 @@
         'throttles' => 'ThrottleEntity',
         'parameters' => 'ParameterEntity',
         'product_parameters' => 'ProductParameterEntity',
+        'countries' => 'CountryEntity',
+        'states' => 'StateEntity',
     ),
 
     'menu' => array(
@@ -30,6 +32,8 @@
             'products',
             'categories',
         ),
+
+        'countries',
 
         'backend.auth' => array(
             'users',

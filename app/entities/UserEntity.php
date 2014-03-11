@@ -16,6 +16,8 @@ class UserEntity extends BaseSchema {
         $schema->bool('activated');
         $schema->string('first_name');
         $schema->string('last_name');
+        $schema->relates('country', 'countries');
+        $schema->relates('state', 'states')->constraintWith('country');
         $schema->embed('address')->required();
         $schema->email('email')->required();
         $schema->password('password')->required();

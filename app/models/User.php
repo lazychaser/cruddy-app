@@ -35,4 +35,14 @@ class User extends SentryUser {
     {
         return $this->morphOne('Address', 'addressable');
     }
+
+    public function country()
+    {
+    	return $this->belongsTo('Country', 'country_id', 'id', 'country');
+    }
+
+    public function state()
+    {
+    	return $this->belongsTo('State', 'state_id', 'id', 'state');
+    }
 }
