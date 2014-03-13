@@ -10,6 +10,8 @@ class UserEntity extends BaseSchema {
 
     protected $defaultOrder = 'full_name';
 
+    protected $filters = ['groups', 'country', 'state'];
+
     public function fields($schema)
     {
         $schema->increments('id');

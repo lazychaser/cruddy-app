@@ -11,6 +11,8 @@ class ProductEntity extends BaseSchema {
 
     protected $defaultOrder = 'title';
 
+    protected $filters = ['categories'];
+
     public function fields($schema)
     {
         $schema->increments('id');

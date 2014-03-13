@@ -8,6 +8,8 @@ class CategoryEntity extends BaseSchema {
 
     protected $titleAttribute = 'title';
 
+    protected $filters = ['parent'];
+
     public function fields($schema)
     {
         $schema->increments('id');
@@ -37,7 +39,8 @@ class CategoryEntity extends BaseSchema {
     {
         $validate->rules(
         [
-            
+            'title' => 'required',
+            'slug' => 'required',
         ]);
     }
 }
