@@ -54,6 +54,7 @@ class UserEntity extends BaseSchema {
             'email' => 'required|email|max:255',
             'first_name' => 'max:255',
             'last_name' => 'max:255',
+            'address' => 'required',
         ]);
 
         $validate->create(

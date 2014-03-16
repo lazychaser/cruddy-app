@@ -22,11 +22,6 @@ class StateEntity extends BaseSchema {
         $schema->timestamps();
     }
 
-    public function columns($schema)
-    {
-        $schema->col('country');
-    }
-
     /**
      * Define validation rules.
      *
