@@ -1,6 +1,6 @@
 <?php return array(
 
-    'brand' => 'App',
+    'brand' => 'Test App',
 
     'uri' => 'backend',
 
@@ -9,6 +9,8 @@
     'permissions' => 'sentry',
 
     'auth_filter' => 'auth',
+
+    'logout_url' => url('logout'),
 
     'layout' => 'cruddy::layout',
 
@@ -39,5 +41,7 @@
             'users',
             'groups',
         ),
+
+        'Custom page' => url('backend/custom_page'),
     ),
 );

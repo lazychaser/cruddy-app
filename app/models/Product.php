@@ -3,7 +3,7 @@
 class Product extends Eloquent {
 
     protected $fillable = [
-        'title', 'description', 'image', 'type',
+        'title', 'description', 'image', 'type', 'price',
     ];
 
     public function categories()

@@ -11,12 +11,13 @@ class ProductEntity extends BaseSchema {
 
     protected $defaultOrder = 'title';
 
-    protected $filters = ['categories'];
+    protected $filters = ['price', 'categories'];
 
     public function fields($schema)
     {
         $schema->increments('id');
         $schema->string('title')->required();
+        $schema->float('price')->required();
         $schema->enum('type', $this->getTypes())->prompt('Please, select type');
         $schema->markdown('description');
         $schema->image('image');
@@ -45,6 +46,7 @@ class ProductEntity extends BaseSchema {
         $schema->col('id');
         $schema->col('image')->format('Image');
         $schema->col('title');
+        $schema->col('price');
         $schema->col('categories');
         $schema->col('updated_at');
     }

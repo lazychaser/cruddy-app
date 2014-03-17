@@ -24,7 +24,7 @@ class ProductParameterEntity extends BaseSchema {
         $s->increments('id');
         $s->relates('parameter', 'parameters')->required()->label('Test label');
         $s->string('value')->required();
-        $s->string('order');
+        $s->integer('order');
     }
 
     /**
@@ -40,6 +40,7 @@ class ProductParameterEntity extends BaseSchema {
         [
             'parameter' => 'required|exists:parameters,id',
             'value' => 'required',
+            'order' => 'numeric',
         ]);
     }
 }
