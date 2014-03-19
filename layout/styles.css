@@ -1,0 +1,87 @@
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+}
+
+/**
+ * BASE LAYOUT
+ */
+
+.page {
+    padding-top: 51px;
+}
+
+.column {
+    float: left;
+}
+
+    .column-main {
+        width: 80%;
+    }
+
+    .column-extra {
+        width: 20%;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+.content-header {
+    overflow: hidden;
+
+    height: 50px;
+    padding-left: 15px;
+
+    background-color: #fff;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.content-body {
+    height: 100%;
+
+    margin-top: -50px;
+    padding-top: 50px;
+    padding-left: 15px;
+}
+
+    .content-body .column {
+        overflow: auto;
+        height: 100%;
+    }
+
+    .content-body .column-extra {
+        background-color: #fff;
+        position: relative;
+    }
+
+/**
+ * ENTITY SPECIFIC
+ */
+
+.entity-page {
+    height: 100%;
+}
+
+.entity-title-buttons {
+    float: right;
+    padding-top: 8px;
+}
+
+.entity-title {
+    float: left;
+
+    margin: 0;
+
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.entity-search-box {
+    margin-top: 8px;
+}

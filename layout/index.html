@@ -1,0 +1,629 @@
+<html>
+<head>
+    <title>Layout test</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top main-nav" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Brand</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page entity-page">
+        <div class="content-header">
+            <div class="column column-main">
+                <h1 class="entity-title">
+                    Статьи
+                </h1>
+
+                <div class="entity-title-buttons">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-plus"></span> новая статья
+                        </button>
+
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-trash"></span>
+                            корзина
+                        </button>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">С выделенными <span class="caret"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column column-extra">
+                <input type="text" class="form-control entity-search-box" placeholder="search">
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="column column-main">
+                <table class="table table-hover data-grid data-grid-staff">
+                    <thead>
+                        <tr>
+                            <th class="col-id col-primary" id="col-id">
+                                <span class="sortable" data-id="id">Id</span>
+                            </th>
+                            <th class="col-avatar col-image" id="col-avatar">
+                                <span class="glyphicon glyphicon-question-sign" title="Изображение сотрудника, которое будет видно на его странице. Желательно квадратное изображение с лицом в центре."></span>
+                                Аватар
+                            </th>
+                            <th class="col-name col-string" id="col-name">
+                                <span class="sortable asc" data-id="name">Имя</span>
+                            </th>
+                            <th class="col-phone col-string" id="col-phone">
+                                <span class="sortable" data-id="phone">Телефон</span>
+                            </th>
+                            <th class="col-email col-email" id="col-email">
+                                <span class="sortable" data-id="email">Email</span>
+                            </th>
+                            <th class="col-specialization col-relation" id="col-specialization">
+                                <span class="glyphicon glyphicon-question-sign" title="Основная специализация врача."></span>
+                                Специализация
+                            </th>
+                            <th class="col-updated_at col-datetime" id="col-updated_at">
+                                <span class="sortable" data-id="updated_at">Обновлено</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="items">
+                        <tr class="item " id="item-20" data-id="20">
+                            <td class="col-id col-primary">20</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fgh8Sx5.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/gh8Sx5.jpg"></td>
+                            <td class="col-name col-string">Абакумов Александр Михайлович</td>
+                            <td class="col-phone col-string">+7 (495) 506-0720</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-8" data-id="8">
+                            <td class="col-id col-primary">8</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FEuIpTW.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/EuIpTW.jpg"></td>
+                            <td class="col-name col-string">Абалмасов Константин Георгиевич</td>
+                            <td class="col-phone col-string">+7 (495) 236-9647</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-9" data-id="9">
+                            <td class="col-id col-primary">9</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FNxggYD.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/NxggYD.jpg"></td>
+                            <td class="col-name col-string">Абальян Саломея Альбертовна</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-7" data-id="7">
+                            <td class="col-id col-primary">7</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FjIiBuc.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/jIiBuc.jpg"></td>
+                            <td class="col-name col-string">Абовян Георгий Робертович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-11" data-id="11">
+                            <td class="col-id col-primary">11</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FbJ3ROv.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/bJ3ROv.jpg"></td>
+                            <td class="col-name col-string">Абрамян Шмавон Маисович</td>
+                            <td class="col-phone col-string">+7 (91) 111-0411</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-12" data-id="12">
+                            <td class="col-id col-primary">12</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FBbkWz3.jpeg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/BbkWz3.jpeg"></td>
+                            <td class="col-name col-string">Абшилава Олег Иванович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-13" data-id="13">
+                            <td class="col-id col-primary">13</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FSpk0bi.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/Spk0bi.jpg"></td>
+                            <td class="col-name col-string">Авдеев Алексей Евгеньевич</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-14" data-id="14">
+                            <td class="col-id col-primary">14</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fg3nU0B.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/g3nU0B.jpg"></td>
+                            <td class="col-name col-string">Авдошенко Ксения Евгеньевна</td>
+                            <td class="col-phone col-string">+7 (926) 526-5858</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-15" data-id="15">
+                            <td class="col-id col-primary">15</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2F11OOPq.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/11OOPq.jpg"></td>
+                            <td class="col-name col-string">Аверченков Денис Сергеевич</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-16" data-id="16">
+                            <td class="col-id col-primary">16</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FRYhY0A.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/RYhY0A.jpg"></td>
+                            <td class="col-name col-string">Адамян Арнольд Арамович</td>
+                            <td class="col-phone col-string">+7 (495) 988-8099</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-17" data-id="17">
+                            <td class="col-id col-primary">17</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FjzNiEJ.jpeg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/jzNiEJ.jpeg"></td>
+                            <td class="col-name col-string">Адамян Рубен Татевосович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-18" data-id="18">
+                            <td class="col-id col-primary">18</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2F0CCBO2.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/0CCBO2.jpg"></td>
+                            <td class="col-name col-string">Азимова Рано Боходыровна</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-19" data-id="19">
+                            <td class="col-id col-primary">19</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FhR6r2b.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/hR6r2b.jpg"></td>
+                            <td class="col-name col-string">Айрапетян Роберт Григорьевич</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-10" data-id="10">
+                            <td class="col-id col-primary">10</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FFk6olY.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/Fk6olY.jpg"></td>
+                            <td class="col-name col-string">Акопов Арам Артурович</td>
+                            <td class="col-phone col-string">+7 (495) 510-7976</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-21" data-id="21">
+                            <td class="col-id col-primary">21</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FLW7c0M.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/LW7c0M.jpg"></td>
+                            <td class="col-name col-string">Акопян Андрей Степанович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-22" data-id="22">
+                            <td class="col-id col-primary">22</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FLqr12s.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/Lqr12s.jpg"></td>
+                            <td class="col-name col-string">Алексанян Тигран Альбертович</td>
+                            <td class="col-phone col-string">+7 (495) 922-0177</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-23" data-id="23">
+                            <td class="col-id col-primary">23</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FkS6gtE.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/kS6gtE.jpg"></td>
+                            <td class="col-name col-string">Алиев Сеймур Этибарович</td>
+                            <td class="col-phone col-string">+7 (926) 382-0701</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-24" data-id="24">
+                            <td class="col-id col-primary">24</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FwW8fHb.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/wW8fHb.jpg"></td>
+                            <td class="col-name col-string">Алиев Таир Рафикович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-25" data-id="25">
+                            <td class="col-id col-primary">25</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FLAJlGA.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/LAJlGA.jpg"></td>
+                            <td class="col-name col-string">Аликова Алла Владимировна</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-26" data-id="26">
+                            <td class="col-id col-primary">26</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FtBKbrR.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/tBKbrR.jpg"></td>
+                            <td class="col-name col-string">Аляева Ольга Юрьевна</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-27" data-id="27">
+                            <td class="col-id col-primary">27</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FT3anPR.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/T3anPR.jpg"></td>
+                            <td class="col-name col-string">Андрющенко Олеся Анатольевна</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-28" data-id="28">
+                            <td class="col-id col-primary">28</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fldo1qI.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/ldo1qI.jpg"></td>
+                            <td class="col-name col-string">Анисимов Алексей Юрьевич</td>
+                            <td class="col-phone col-string">+7 (495) 739-7855</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-29" data-id="29">
+                            <td class="col-id col-primary">29</td>
+                            <td class="col-avatar col-image"></td>
+                            <td class="col-name col-string">Аракелян Карен Арташесович</td>
+                            <td class="col-phone col-string">+7 (495) 505-1115</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Анастезиолог-реаниматор</td>
+                            <td class="col-updated_at col-datetime">22.01.2014</td>
+                        </tr>
+                        <tr class="item " id="item-30" data-id="30">
+                            <td class="col-id col-primary">30</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FLNcZph.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/LNcZph.jpg"></td>
+                            <td class="col-name col-string">Архипов Денис Михайлович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-31" data-id="31">
+                            <td class="col-id col-primary">31</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FEC0lge.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/EC0lge.jpg"></td>
+                            <td class="col-name col-string">Асафов Андрей Сергеевич</td>
+                            <td class="col-phone col-string">+7 (495) 413-3410</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-32" data-id="32">
+                            <td class="col-id col-primary">32</td>
+                            <td class="col-avatar col-image"></td>
+                            <td class="col-name col-string">Асафов Андрей Сергеевич</td>
+                            <td class="col-phone col-string">+7 (495) 415-2506</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">23.01.2014</td>
+                        </tr>
+                        <tr class="item " id="item-33" data-id="33">
+                            <td class="col-id col-primary">33</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2F4d0dtE.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/4d0dtE.jpg"></td>
+                            <td class="col-name col-string">Ахмеров Ренат Рашитович</td>
+                            <td class="col-phone col-string">+7 (495) 788-9799</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-34" data-id="34">
+                            <td class="col-id col-primary">34</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FEPQbFP.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/EPQbFP.jpg"></td>
+                            <td class="col-name col-string">Ашрафов Рауф Ашрафович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-5" data-id="5">
+                            <td class="col-id col-primary">5</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FI9BcfC.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/I9BcfC.jpg"></td>
+                            <td class="col-name col-string">Бабаян Гайк Павлович</td>
+                            <td class="col-phone col-string">+7 (495) 772-8972</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-35" data-id="35">
+                            <td class="col-id col-primary">35</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fw1SjFE.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/w1SjFE.jpg"></td>
+                            <td class="col-name col-string">Баков Вадим Сергеевич</td>
+                            <td class="col-phone col-string">+7 (495)&nbsp;540-4057&nbsp;</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-36" data-id="36">
+                            <td class="col-id col-primary">36</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FbpKCNA.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/bpKCNA.jpg"></td>
+                            <td class="col-name col-string">Балкизов Вячеслав Валерьевич</td>
+                            <td class="col-phone col-string">+7 (495) 720-7513</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-37" data-id="37">
+                            <td class="col-id col-primary">37</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FlzAOke.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/lzAOke.jpg"></td>
+                            <td class="col-name col-string">Баниж Олег Николаевич</td>
+                            <td class="col-phone col-string">+7 (495) 972-9668</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-38" data-id="38">
+                            <td class="col-id col-primary">38</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FZ1u838.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/Z1u838.jpg"></td>
+                            <td class="col-name col-string">Барышников Игорь Владимирович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-39" data-id="39">
+                            <td class="col-id col-primary">39</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FCjyo5W.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/Cjyo5W.jpg"></td>
+                            <td class="col-name col-string">Баулин Владимир Викторович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-40" data-id="40">
+                            <td class="col-id col-primary">40</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fx0Hyma.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/x0Hyma.jpg"></td>
+                            <td class="col-name col-string">Белый Игорь Анатольевич</td>
+                            <td class="col-phone col-string">+7 (903) 700-1624</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-41" data-id="41">
+                            <td class="col-id col-primary">41</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FuPHBTp.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/uPHBTp.jpg"></td>
+                            <td class="col-name col-string">Берлев Олег Викторович</td>
+                            <td class="col-phone col-string">+7 (495) 562-1274</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-42" data-id="42">
+                            <td class="col-id col-primary">42</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FoT8vlR.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/oT8vlR.jpg"></td>
+                            <td class="col-name col-string">Бизин Борис Иванович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-43" data-id="43">
+                            <td class="col-id col-primary">43</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FEkdgXC.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/EkdgXC.jpg"></td>
+                            <td class="col-name col-string">Бисеков Саламат Хамитович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-2" data-id="2">
+                            <td class="col-id col-primary">2</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FwBkpR8.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/wBkpR8.jpg"></td>
+                            <td class="col-name col-string">Блохин Сергей Николаевич</td>
+                            <td class="col-phone col-string">+7 (495) 585-7051</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-44" data-id="44">
+                            <td class="col-id col-primary">44</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FaB073N.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/aB073N.jpg"></td>
+                            <td class="col-name col-string">Богачев Вадим Юрьевич</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-45" data-id="45">
+                            <td class="col-id col-primary">45</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FKMk378.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/KMk378.jpg"></td>
+                            <td class="col-name col-string">Богданова Юлия Андреевна</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-46" data-id="46">
+                            <td class="col-id col-primary">46</td>
+                            <td class="col-avatar col-image"></td>
+                            <td class="col-name col-string">Богомолов Михаил Иванович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">23.01.2014</td>
+                        </tr>
+                        <tr class="item " id="item-47" data-id="47">
+                            <td class="col-id col-primary">47</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FyvBx60.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/yvBx60.jpg"></td>
+                            <td class="col-name col-string">Борисенко Анастасия Сергеевна</td>
+                            <td class="col-phone col-string">+7 (906) 7-3615</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-48" data-id="48">
+                            <td class="col-id col-primary">48</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fm5Jxwv.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/m5Jxwv.jpg"></td>
+                            <td class="col-name col-string">Боровиков Алексей Михайлович</td>
+                            <td class="col-phone col-string">+7 (495) 29-0330</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-49" data-id="49">
+                            <td class="col-id col-primary">49</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FV9jKTK.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/V9jKTK.jpg"></td>
+                            <td class="col-name col-string">Бритун Юлия Анатольевна</td>
+                            <td class="col-phone col-string">+7 (495) 974-7444</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-50" data-id="50">
+                            <td class="col-id col-primary">50</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2F5bs6pw.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/5bs6pw.jpg"></td>
+                            <td class="col-name col-string">Брусова Людмила Арсентьевна</td>
+                            <td class="col-phone col-string">8 (495) 505-1115</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-51" data-id="51">
+                            <td class="col-id col-primary">51</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2F2RSINy.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/2RSINy.jpg"></td>
+                            <td class="col-name col-string">Буркун Евгений Николаевич</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-52" data-id="52">
+                            <td class="col-id col-primary">52</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2FqVwg1p.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/qVwg1p.jpg"></td>
+                            <td class="col-name col-string">Бурлаков Александр Сергеевич</td>
+                            <td class="col-phone col-string">+7 (495) 955-7611</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-53" data-id="53">
+                            <td class="col-id col-primary">53</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fy6A7Md.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/y6A7Md.jpg"></td>
+                            <td class="col-name col-string">Бурый Анатолий Владимирович</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                        <tr class="item " id="item-54" data-id="54">
+                            <td class="col-id col-primary">54</td>
+                            <td class="col-avatar col-image">
+                                <img src="http://surgeons.eu1.frbit.net/backend/thumb?src=upload%2Favatars%2Fu7sNX3.jpg&amp;width=40&amp;height=40" width="40" height="40" alt="upload/avatars/u7sNX3.jpg"></td>
+                            <td class="col-name col-string">Буянов Василий Васильевич</td>
+                            <td class="col-phone col-string">n/a</td>
+                            <td class="col-email col-email">n/a</td>
+                            <td class="col-specialization col-relation">Пластический хирург</td>
+                            <td class="col-updated_at col-datetime">24.02.2014</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div> <!-- /.column-main -->
+
+            <div class="column column-extra">
+                <div class="form-group filter filter-specialization">
+                    <label>Специализация врачей</label>
+                    <div class="input-wrap">
+                        <div class="entity-dropdown" id="view185">
+                            <div class="input-group input-group ed-item ed-dropdown-toggle" data-key="0">
+                                <input type="text" class="form-control" data-toggle="dropdown" data-target="#view185" placeholder="Любое значение" value="" readonly="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-remove" tabindex="-1" style="display: none;">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-dropdown dropdown-toggle" data-toggle="dropdown" id="view185-dropdown" data-target="#view185" tab-index="1">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group filter filter-institutions">
+                    <label>Учреждение</label>
+                    <div class="input-wrap">
+                        <div class="entity-dropdown" id="view186">
+                            <div class="input-group input-group ed-item ed-dropdown-toggle" data-key="0">
+                                <input type="text" class="form-control" data-toggle="dropdown" data-target="#view186" placeholder="Любое значение" value="" readonly="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-remove" tabindex="-1" style="display: none;">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-dropdown dropdown-toggle" data-toggle="dropdown" id="view186-dropdown" data-target="#view186" tab-index="1">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.content-body -->
+    </div> <!-- /.entity-page -->
+</body>
+</html>
