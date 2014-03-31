@@ -8,5 +8,6 @@
 
     'fields' => array(
         'created_at' => 'Creation time',
+        'title' => '<title>',
     ),
 );

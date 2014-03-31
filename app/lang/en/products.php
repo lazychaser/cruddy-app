@@ -2,6 +2,6 @@
 [
     'fields' =>
     [
-        'parameters' => 'Parameters',
+        'parameters' => 'Parameters <b>test</b>',
     ],
 ];
