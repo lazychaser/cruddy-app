@@ -17,7 +17,6 @@ class CategoryEntity extends BaseSchema {
         $schema->slug('slug', 'title')->required();
         $schema->image('images')->many();
         $schema->relates('parent', 'categories');
-        $schema->relates('children', 'categories');
         $schema->timestamps();
     }
 

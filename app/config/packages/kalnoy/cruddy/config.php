@@ -29,19 +29,34 @@
         'states' => 'StateEntity',
     ),
 
-    'menu' => array(
-        'Store' => array(
-            'products',
+    'menu' =>
+    [
+        [
+            'label' => 'Dashboard',
+            'url' => 'backend/custom_page',
+            'icon' => 'dashboard',
+        ],
+
+        '-',
+
+        'Store' =>
+        [
+            [ 'entity' => 'products', 'label' => 'Products (custom)', 'icon' => 'usd' ],
+            '-',
             'categories',
-        ),
+        ],
 
         'countries',
 
-        'backend.auth' => array(
+        'backend.auth' =>
+        [
             'users',
             'groups',
-        ),
+        ],
+    ],
 
-        'Custom page' => url('backend/custom_page'),
-    ),
+    'service_menu' =>
+    [
+        [ 'label' => 'Logout', 'url' => 'logout', 'icon' => 'log-out' ],
+    ],
 );

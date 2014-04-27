@@ -17,7 +17,7 @@ class ProductEntity extends BaseSchema {
     {
         $schema->increments('id');
         $schema->string('title')->required();
-        $schema->float('price')->required();
+        $schema->float('price');
         $schema->enum('type', $this->getTypes())->prompt('Please, select type');
         $schema->markdown('description');
         $schema->image('image');
