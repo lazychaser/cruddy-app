@@ -17,9 +17,9 @@ class ProductEntity extends BaseSchema {
     {
         $schema->increments('id');
         $schema->string('title')->required();
-        $schema->float('price');
-        $schema->enum('type', $this->getTypes())->prompt('Please, select type');
-        $schema->markdown('description');
+        $schema->float('price')->append('$');
+        $schema->enum('type', $this->getTypes())->prompt('Select type')->prepend('products.type');
+        $schema->text('description');
         $schema->image('image');
         
         $schema->relates('categories', 'categories')->filterOptions(function ($q)
@@ -28,7 +28,29 @@ class ProductEntity extends BaseSchema {
         });
 
         $schema->embed('parameters', 'product_parameters');
+        
         $schema->timestamps();
+    }
+
+    public function layout($l)
+    {
+        $l->tab('Main', function ($tab)
+        {
+            $tab->row(function ($row)
+            {
+                $row->col(9, function ($col)
+                {
+                    $col->field('title');
+                    $col->row([ 'price', 'type' ]);
+                });
+                
+                $row->col(3, 'image');
+            });
+
+            $tab->field('description', 'categories');
+        });
+
+        $l->tab('Parameters', 'parameters');
     }
 
     public function getTypes()
@@ -49,6 +71,11 @@ class ProductEntity extends BaseSchema {
         $schema->col('price');
         $schema->col('categories');
         $schema->col('updated_at');
+        
+        $schema->states(function ($model)
+        {
+            return $model->price == null ? 'danger' : '';
+        });
     }
 
     public function rules($validate)

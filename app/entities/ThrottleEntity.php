@@ -12,14 +12,72 @@ class ThrottleEntity extends BaseSchema {
         $schema->increments('id');
         $schema->bool('suspended');
         $schema->bool('banned');
-        $schema->string('ip_address');
-        $schema->datetime('suspended_at');
-        $schema->datetime('banned_at');
+        $schema->string('ip_address')->disable();
+        $schema->datetime('suspended_at')->disable();
+        $schema->datetime('banned_at')->disable();
     }
 
     public function columns($s)
     {
         $s->col('suspended');
         $s->col('banned');
+    }
+
+    public function toArray()
+    {
+        return parent::toArray() +
+        [
+            'layout' =>
+            [
+                [
+                    'method' => 'tab',
+                    'items' =>
+                    [
+                        [
+                            'method' => 'row',
+                            'items' =>
+                            [
+                                [
+                                    'method' => 'col',
+                                    'span' => '3',
+                                    'items' => [ [ 'method' => 'field', 'field' => 'suspended' ] ],
+                                ],
+                              
+                                [
+                                    'method' => 'col',
+                                    'span' => '3',
+                                    'items' => [ [ 'method' => 'field', 'field' => 'banned' ] ],
+                                ],
+                            ],
+                        ],
+
+                        [
+                            'method' => 'row',
+                            'items' =>
+                            [
+
+                                [
+                                    'method' => 'col',
+                                    'span' => '3',
+                                    'items' => [ [ 'method' => 'field', 'field' => 'suspended_at' ] ],
+                                ],
+                              
+                                [
+                                    'method' => 'col',
+                                    'span' => '3',
+                                    'items' => [ [ 'method' => 'field', 'field' => 'banned_at' ] ],
+                                ],
+                              
+                                [
+                                    'method' => 'col',
+                                    'span' => '3',
+                                    'items' => [ [ 'method' => 'field', 'field' => 'ip_address' ] ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ];
     }
 }

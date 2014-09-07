@@ -27,10 +27,13 @@
         'product_parameters' => 'ProductParameterEntity',
         'countries' => 'CountryEntity',
         'states' => 'StateEntity',
+        'translations' => 'TranslationEntity',
     ),
 
     'menu' =>
     [
+        '-',
+        
         [
             'label' => 'Dashboard',
             'url' => 'backend/custom_page',
@@ -39,11 +42,33 @@
 
         '-',
 
-        'Store' =>
         [
-            [ 'entity' => 'products', 'label' => 'Products (custom)', 'icon' => 'usd' ],
-            '-',
-            'categories',
+            'label' => 'tore',
+            'icon' => 'usd',
+
+            'items' =>
+            [
+                [
+                    'entity' => 'products',
+                    'label' => 'Products (custom label)',
+                ],
+                
+                '-',
+
+                [
+                    'label' => 'Test the permissions.', 
+                    'href' => '#test', 
+                    'permissions' => function () { return false; },
+                ],
+                
+                '-',
+                
+                'categories',
+
+                '-',
+            ],
+
+            'data-foo' => 'bar',
         ],
 
         'countries',

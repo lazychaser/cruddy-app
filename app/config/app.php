@@ -108,10 +108,13 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'App\Service\FormServiceProvider',
+
 		'Kalnoy\Cruddy\CruddyServiceProvider',
+		'Kalnoy\Cruddy\CKEditor\CKEditorServiceProvider',
+		'Kalnoy\Cruddy\Sentry\SentryServiceProvider',
+		
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Clockwork\Support\Laravel\ClockworkServiceProvider',
-
 	),
 
 	/*

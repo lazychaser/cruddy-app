@@ -20,6 +20,17 @@ class CategoryEntity extends BaseSchema {
         $schema->timestamps();
     }
 
+    public function layout($l)
+    {
+        $l->row(
+        [
+            [ 'title', 'slug', 'parent' ],
+            [ 4, 'created_at', 'updated_at' ],
+        ]);
+
+        $l->tab('Images', 'images');
+    }
+
     public function columns($schema)
     {
         $schema->col('id');

@@ -3,6 +3,8 @@
 /app/config/local
 /assets/vendor
 /node_modules
+/workbench
+/packages
 composer.phar
 .DS_Store
 _ide_helper.php

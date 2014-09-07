@@ -24,6 +24,7 @@ class ProductParameterEntity extends BaseSchema {
         $s->increments('id');
         $s->relates('parameter', 'parameters')->required()->label('Test label');
         $s->string('value')->required();
+        $s->embed('translations', 'translations')->disable(self::WHEN_NEW);
         $s->integer('order');
     }
 

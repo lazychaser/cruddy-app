@@ -16,4 +16,9 @@ class ProductParameter extends Eloquent {
         return $this->belongsTo('Parameter', 'parameter_id', 'id', 'parameter');
     }
 
+    public function translations()
+    {
+        return $this->hasMany('Translation', 'product_parameter_id', 'id');
+    }
+
 }

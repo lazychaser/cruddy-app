@@ -5,11 +5,10 @@
 	"license": "MIT",
 
 	"require": {
-		"laravel/framework": "~4.1.18",
+		"laravel/framework": "~4.2",
 		"cartalyst/sentry": "~2.0",
 		"anahkiasen/former": "~3.4",
-		"intervention/image": "~1.5",
-		"intervention/imagecache": "~0.5"
+		"intervention/image": "~2.0"
 	},
 
     "require-dev": {
@@ -30,13 +29,14 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
 
-			"cruddy/src/controllers",
             "cruddy/src/exceptions.php"
 		],
 
 		"psr-0": {
 			"Kalnoy\\Cruddy": "cruddy/src/",
-			"App": "app/lib/"
+			"App": "app/lib/",
+			"Kalnoy\\Cruddy\\CKEditor": "workbench/cruddy/ckeditor/src",
+			"Kalnoy\\Cruddy\\Sentry": "workbench/cruddy/sentry/src"
 		},
 
         "files": [
