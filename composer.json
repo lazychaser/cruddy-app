@@ -5,10 +5,11 @@
 	"license": "MIT",
 
 	"require": {
-		"laravel/framework": "~4.2",
+		"laravel/framework": "dev-master",
 		"cartalyst/sentry": "~2.0",
 		"anahkiasen/former": "~3.4",
-		"intervention/image": "~2.0"
+		"intervention/image": "~2.0",
+        "illuminate/html": "~4.3"
 	},
 
     "require-dev": {
@@ -35,8 +36,8 @@
 		"psr-0": {
 			"Kalnoy\\Cruddy": "cruddy/src/",
 			"App": "app/lib/",
-			"Kalnoy\\Cruddy\\CKEditor": "workbench/cruddy/ckeditor/src",
-			"Kalnoy\\Cruddy\\Sentry": "workbench/cruddy/sentry/src"
+			"Kalnoy\\Cruddy\\CKEditor": "cruddy-ckeditor/src",
+			"Kalnoy\\Cruddy\\Sentry": "cruddy-sentry/src"
 		},
 
         "files": [
@@ -45,22 +46,23 @@
 	},
 
 	"scripts": {
-		"pre-update-cmd": [
-			"php artisan clear-compiled"
-		],
 
 		"post-update-cmd": [
+            "php artisan clear-compiled",
 			"php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 
 		"post-create-cmd": [
-			"php artisan ide-helper:generate",
+            "php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		]
 	},
 
 	"config": {
 		"preferred-install": "dist"
-	}
+	},
+
+    "minimum-stability": "dev"
 }

@@ -54,4 +54,13 @@ return array(
 
 	'storage' => __DIR__.'/../app/storage',
 
+    'commands' => __DIR__.'/../app/commands',
+    'config' => __DIR__.'/../app/config',
+    'controllers' => __DIR__.'/../app/controllers',
+    'database' => __DIR__.'/../app/database',
+    'filters' => __DIR__.'/../app/filters',
+    'lang' => __DIR__.'/../app/lang',
+    'providers' => __DIR__.'/../app/providers',
+    'requests' => __DIR__.'/../app/requests',
+
 );

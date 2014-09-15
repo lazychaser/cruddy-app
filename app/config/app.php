@@ -80,12 +80,11 @@ return array(
 
 	'providers' => array(
 
+        'Illuminate\Foundation\Providers\LegacyStructureServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
-		'Illuminate\Session\CommandsServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-		'Illuminate\Routing\ControllerServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
 		'Illuminate\Encryption\EncryptionServiceProvider',
@@ -98,21 +97,19 @@ return array(
 		'Illuminate\Pagination\PaginationServiceProvider',
 		'Illuminate\Queue\QueueServiceProvider',
 		'Illuminate\Redis\RedisServiceProvider',
-		'Illuminate\Remote\RemoteServiceProvider',
 		'Illuminate\Auth\Reminders\ReminderServiceProvider',
 		'Illuminate\Database\SeedServiceProvider',
 		'Illuminate\Session\SessionServiceProvider',
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'App\Service\FormServiceProvider',
 
 		'Kalnoy\Cruddy\CruddyServiceProvider',
 		'Kalnoy\Cruddy\CKEditor\CKEditorServiceProvider',
 		'Kalnoy\Cruddy\Sentry\SentryServiceProvider',
-		
+
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Clockwork\Support\Laravel\ClockworkServiceProvider',
 	),
