@@ -1,3 +1,11 @@
 [submodule "cruddy"]
 	path = cruddy
 	url = https://github.com/lazychaser/cruddy.git
+
+[submodule "cruddy-ckeditor"]
+	path = cruddy-ckeditor
+	url = https://github.com/lazychaser/cruddy-ckeditor.git
+
+[submodule "cruddy-sentry"]
+	path = cruddy-sentry
+	url = https://github.com/lazychaser/cruddy-sentry.git

@@ -29,7 +29,7 @@ class CountryEntity extends BaseSchema {
     public function fields($schema)
     {
         $schema->increments('id');
-        $schema->string('name')->required();
+        $schema->string('name');
         $schema->embed('states', 'states');
         $schema->timestamps();
     }

@@ -20,11 +20,11 @@ class UserEntity extends BaseSchema {
         $schema->bool('activated');
         $schema->string('first_name');
         $schema->string('last_name');
-        $schema->relates('country', 'countries')->disable(self::WHEN_EXISTS)->required();
-        $schema->relates('state', 'states')->constraintWith('country')->required();
-        $schema->embed('address')->required();
-        $schema->email('email')->required();
-        $schema->password('password')->required();
+        $schema->relates('country', 'countries')->disable(self::WHEN_EXISTS);
+        $schema->relates('state', 'states')->constraintWith('country');
+        $schema->embed('address');
+        $schema->email('email');
+        $schema->password('password');
         $schema->embed('throttle');
         $schema->relates('groups');
         $schema->code('permissions_string');
@@ -61,7 +61,7 @@ class UserEntity extends BaseSchema {
     public function columns($schema)
     {
         $schema->col('id');
-        
+
         $schema->compute('full_name', function ($model)
         {
             return $this->toString($model);
@@ -70,7 +70,6 @@ class UserEntity extends BaseSchema {
 
         $schema->col('email');
         $schema->col('groups');
-        // $schema->col('trottle.suspended');
         $schema->col('address');
         $schema->col('updated_at');
         $schema->col('last_login');
@@ -110,104 +109,4 @@ class UserEntity extends BaseSchema {
         return implode(' ', $components) ?: $model->email;
     }
 
-    public function toArray()
-    {
-        return parent::toArray() +
-        [
-            'layout' =>
-            [
-                [
-                    'method' => 'tab',
-
-                    'items' =>
-                    [
-                        [
-                            'method' => 'fieldset',
-                            'title' => 'Name',
-
-                            'items' =>
-                            [
-                                [
-                                    'method' => 'row',
-                                    'items' =>
-                                    [
-                                        [
-                                            'method' => 'col',
-                                            'span' => 6, 
-                                            'items' =>
-                                            [
-                                                [ 'method' => 'field', 'field' => 'last_name' ],
-                                            ],
-                                        ],
-
-                                        [
-                                            'method' => 'col',
-                                            'span' => 6,
-                                            'items' =>
-                                            [
-                                                [ 'method' => 'field', 'field' => 'first_name' ],
-                                            ],
-                                        ],
-                                    ],
-                                ]
-                            ],
-                        ],
-
-                        [
-                            'method' => 'fieldset',
-                            'title' => 'Credentials',
-
-                            'items' =>
-                            [
-                                [
-                                    'method' => 'row',
-                                    'items' =>
-                                    [
-                                        [
-                                            'method' => 'col',
-                                            'span' => 5,
-                                            'items' =>
-                                            [
-                                                [ 'method' => 'field', 'field' => 'activated' ],
-                                                [ 'method' => 'field', 'field' => 'email' ],
-                                                [ 'method' => 'field', 'field' => 'password' ],
-                                                [ 'method' => 'field', 'field' => 'last_login' ],
-                                            ],
-                                        ],
-
-                                        [
-                                            'method' => 'col',
-                                            'span' => 7,
-                                            'items' =>
-                                            [
-                                                [ 'method' => 'field', 'field' => 'permissions_string' ],
-                                            ],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ]
-                    ],
-                ],
-
-                [
-                    'method' => 'tab',
-                    'title' => 'Address',
-                    'items' =>
-                    [
-                        [ 'method' => 'field', 'field' => 'address' ],
-                    ],
-                ],
-
-                [
-                    'method' => 'tab',
-                    'title' => 'Throttle',
-                    'items' =>
-                    [
-                        [ 'method' => 'field', 'field' => 'throttle' ],
-                    ],
-                ],
-            ],
-        ];
-    }
 }

@@ -13,8 +13,8 @@ class CategoryEntity extends BaseSchema {
     public function fields($schema)
     {
         $schema->increments('id');
-        $schema->string('title')->required();
-        $schema->slug('slug', 'title')->required();
+        $schema->string('title');
+        $schema->slug('slug', 'title');
         $schema->image('images')->many();
         $schema->relates('parent', 'categories');
         $schema->timestamps();

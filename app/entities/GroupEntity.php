@@ -14,7 +14,7 @@ class GroupEntity extends BaseSchema {
     public function fields($schema)
     {
         $schema->increments('id');
-        $schema->string('name')->required();
+        $schema->string('name');
         $schema->code('permissions_string');
         $schema->timestamps();
     }

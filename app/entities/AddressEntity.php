@@ -12,7 +12,7 @@ class AddressEntity extends BaseSchema {
     public function fields($schema)
     {
         $schema->increments('id');
-        $schema->string('address')->required()->label('Value');
+        $schema->string('address')->label('Value');
     }
 
     public function rules($v)

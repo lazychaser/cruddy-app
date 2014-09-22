@@ -35,8 +35,8 @@
 		"psr-0": {
 			"Kalnoy\\Cruddy": "cruddy/src/",
 			"App": "app/lib/",
-			"Kalnoy\\Cruddy\\CKEditor": "workbench/cruddy/ckeditor/src",
-			"Kalnoy\\Cruddy\\Sentry": "workbench/cruddy/sentry/src"
+			"Kalnoy\\Cruddy\\CKEditor": "cruddy-ckeditor/src",
+			"Kalnoy\\Cruddy\\Sentry": "cruddy-sentry/src"
 		},
 
         "files": [

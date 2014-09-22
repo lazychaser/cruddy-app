@@ -18,7 +18,7 @@ class StateEntity extends BaseSchema {
     {
         $schema->increments('id');
         $schema->relates('country', 'countries')->hide();
-        $schema->string('name')->required();
+        $schema->string('name');
         $schema->timestamps();
     }
 

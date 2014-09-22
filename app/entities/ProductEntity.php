@@ -1,6 +1,9 @@
 <?php
 
 use Kalnoy\Cruddy\Schema\BaseSchema;
+use Kalnoy\Cruddy\Schema\Layout\Col;
+use Kalnoy\Cruddy\Schema\Layout\Row;
+use Kalnoy\Cruddy\Schema\Layout\TabPane;
 use Kalnoy\Cruddy\Service\Validation\FluentValidator;
 
 class ProductEntity extends BaseSchema {
@@ -16,34 +19,34 @@ class ProductEntity extends BaseSchema {
     public function fields($schema)
     {
         $schema->increments('id');
-        $schema->string('title')->required();
+        $schema->string('title');
         $schema->float('price')->append('$');
         $schema->enum('type', $this->getTypes())->prompt('Select type')->prepend('products.type');
         $schema->text('description');
         $schema->image('image');
-        
+
         $schema->relates('categories', 'categories')->filterOptions(function ($q)
         {
             $q->whereNotNull('parent_id');
         });
 
         $schema->embed('parameters', 'product_parameters');
-        
+
         $schema->timestamps();
     }
 
     public function layout($l)
     {
-        $l->tab('Main', function ($tab)
+        $l->tab('Main', function (TabPane $tab)
         {
-            $tab->row(function ($row)
+            $tab->row(function (Row $row)
             {
-                $row->col(9, function ($col)
+                $row->col(9, function (Col $col)
                 {
                     $col->field('title');
                     $col->row([ 'price', 'type' ]);
                 });
-                
+
                 $row->col(3, 'image');
             });
 
@@ -71,7 +74,7 @@ class ProductEntity extends BaseSchema {
         $schema->col('price');
         $schema->col('categories');
         $schema->col('updated_at');
-        
+
         $schema->states(function ($model)
         {
             return $model->price == null ? 'danger' : '';
@@ -83,6 +86,7 @@ class ProductEntity extends BaseSchema {
         $validate->rules(
         [
             'title' => 'required',
+            'price' => [ 'required', 'numeric' ],
         ]);
     }
 }

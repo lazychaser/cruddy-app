@@ -18,7 +18,7 @@ class ProductParameterSeeder extends Seeder {
                 'parameter_id' => $faker->randomElement($parameters),
                 'product_id' => $faker->randomElement($products),
                 'value' => $faker->sentence(3),
-                'order' => $faker->randomNumber(0, 10),
+                'order' => $faker->numberBetween(0, 10),
             ]);
         }
     }

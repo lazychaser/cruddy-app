@@ -29,21 +29,21 @@ class ParameterEntity extends BaseSchema {
     /**
      * @inheritdoc
      *
-     * @param 
+     * @param
      *
      * @return void
      */
     public function fields($s)
     {
         $s->increments('id');
-        $s->string('name')->required();
+        $s->string('name');
         $s->timestamps();
     }
 
     /**
      * @inheritdoc
      *
-     * @param 
+     * @param
      *
      * @return void
      */
@@ -57,7 +57,7 @@ class ParameterEntity extends BaseSchema {
     /**
      * @inheritdoc
      *
-     * @param \Kalnoy\Cruddy\Service\Validation\FluentValidator 
+     * @param \Kalnoy\Cruddy\Service\Validation\FluentValidator
      *
      * @return void
      */

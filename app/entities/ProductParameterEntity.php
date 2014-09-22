@@ -15,15 +15,15 @@ class ProductParameterEntity extends BaseSchema {
     /**
      * @inheritdoc
      *
-     * @param 
+     * @param
      *
      * @return void
      */
     public function fields($s)
     {
         $s->increments('id');
-        $s->relates('parameter', 'parameters')->required()->label('Test label');
-        $s->string('value')->required();
+        $s->relates('parameter', 'parameters')->label('Test label');
+        $s->string('value');
         $s->embed('translations', 'translations')->disable(self::WHEN_NEW);
         $s->integer('order');
     }
@@ -31,7 +31,7 @@ class ProductParameterEntity extends BaseSchema {
     /**
      * @inheritdoc
      *
-     * @param \Kalnoy\Cruddy\Service\Validation\FluentValidator 
+     * @param \Kalnoy\Cruddy\Service\Validation\FluentValidator
      *
      * @return void
      */

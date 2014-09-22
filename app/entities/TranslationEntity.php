@@ -14,8 +14,8 @@ class TranslationEntity extends BaseSchema {
     public function fields($s)
     {
         $s->increments('id');
-        $s->enum('locale', [ 'en' => 'English', 'ru' => 'Russian' ])->required();
-        $s->string('value')->required();
+        $s->enum('locale', [ 'en' => 'English', 'ru' => 'Russian' ]);
+        $s->string('value');
     }
 
     public function layout($l)
