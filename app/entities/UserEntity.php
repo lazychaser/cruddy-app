@@ -18,7 +18,7 @@ class UserEntity extends BaseSchema {
     {
         $schema->increments('id')->hide(false);
         $schema->bool('activated');
-        $schema->string('first_name');
+        $schema->string('first_name')->help('Test help');
         $schema->string('last_name');
         $schema->relates('country', 'countries')->disable(self::WHEN_EXISTS);
         $schema->relates('state', 'states')->constraintWith('country');
