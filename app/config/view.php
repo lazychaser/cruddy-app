@@ -15,6 +15,8 @@ return array(
 
 	'paths' => array(__DIR__.'/../views'),
 
+	'compiled' => __DIR__.'/../storage/views',
+
 	/*
 	|--------------------------------------------------------------------------
 	| Pagination View

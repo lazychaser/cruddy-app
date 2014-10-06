@@ -2,9 +2,7 @@
 
 use App\Service\Form\UsersForm;
 
-class UsersController extends BaseController {
-
-	protected $layout = 'layouts/master';
+class UsersController {
 
 	protected $form;
 
@@ -15,14 +13,14 @@ class UsersController extends BaseController {
 
 	public function login($redirect = null)
 	{
-		$this->layout->content = View::make('users.login', compact('redirect'));
+		return view('users.login', compact('redirect'));
 	}
 
 	public function logout()
 	{
 		$this->form->logout();
 
-		return Redirect::to('/');
+		return redirect('/');
 	}
 
 	public function authenticate()
@@ -34,7 +32,7 @@ class UsersController extends BaseController {
 			return Redirect::intended();
 		}
 
-		return Redirect::to('login')->withErrors($this->form->errors())->withInput();
+		return redirect('login')->withErrors($this->form->errors())->withInput();
 	}
 
 }

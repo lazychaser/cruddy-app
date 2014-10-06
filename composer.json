@@ -5,11 +5,10 @@
 	"license": "MIT",
 
 	"require": {
-		"laravel/framework": "dev-master",
+		"laravel/framework": "~5.0",
 		"cartalyst/sentry": "~2.0",
-		"anahkiasen/former": "~3.4",
 		"intervention/image": "~2.0",
-        "illuminate/html": "~4.3"
+        "illuminate/html": "~5.0"
 	},
 
     "require-dev": {
@@ -38,6 +37,10 @@
 			"App": "app/lib/",
 			"Kalnoy\\Cruddy\\CKEditor": "cruddy-ckeditor/src",
 			"Kalnoy\\Cruddy\\Sentry": "cruddy-sentry/src"
+		},
+
+		"psr-4": {
+		  "CruddyApp\\": "app/"
 		},
 
         "files": [

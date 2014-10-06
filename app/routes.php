@@ -2,7 +2,7 @@
 
 Route::get('/', function () {
 
-    return Redirect::to('backend');
+    return redirect('backend');
 });
 
 Route::get('login', 'UsersController@login');
